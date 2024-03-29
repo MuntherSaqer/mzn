@@ -73,3 +73,85 @@ Testing
 To run the tests, use the following command:
 mvn test
 Contributing
+
+
+///to add customer 
+use this @post
+http://localhost:8080/api/customers/batch
+[
+  {
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phone": "123-456-7890",
+    "address": "123 Main St"
+  },
+  {
+    "name": "Alice Smith",
+    "email": "alice.smith@example.com",
+    "phone": "987-654-3210",
+    "address": "456 Elm St"
+  },
+  {
+    "name": "Bob Johnson",
+    "email": "bob.johnson@example.com",
+    "phone": "555-123-4567",
+    "address": "789 Oak St"
+  },
+  {
+    "name": "Emily Brown",
+    "email": "emily.brown@example.com",
+    "phone": "333-444-5555",
+    "address": "101 Pine St"
+  }
+]
+
+
+///to add Products
+use this @post
+http://localhost:8080/api/products/batch
+[
+  {
+    "name": "Product 1",
+    "price": 10.99
+  },
+  {
+    "name": "Product 2",
+    "price": 15.49
+  },
+  {
+    "name": "Product 3",
+    "price": 20.79
+  },
+  {
+    "name": "Product 4",
+    "price": 8.99
+  },
+  {
+    "name": "Product 5",
+    "price": 25.99
+  },
+  {
+    "name": "Product 6",
+    "price": 19.99
+  },
+  {
+    "name": "Product 7",
+    "price": 12.49
+  }
+]
+
+
+to create order 
+use this @post
+http://localhost:8080/api/orders
+{
+  "customer": {
+    "id": 3
+  },
+  "products": [
+    {"id": 1},
+    {"id": 2},
+    {"id": 4}
+  ]
+}
+
